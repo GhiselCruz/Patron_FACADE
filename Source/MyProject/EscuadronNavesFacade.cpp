@@ -30,13 +30,22 @@ void AEscuadronNavesFacade::Tick(float DeltaTime)
 
 void AEscuadronNavesFacade::MovimientoEscuadron()
 {
+	NaveCaza->Movimiento();
+	NaveFantasma->Movimiento();
+	NaveAsalto->Movimiento();
 }
 
 void AEscuadronNavesFacade::AtaqueEscuadron()
 {
+	NaveCaza->Ataque();
+	NaveFantasma->Ataque();
+	NaveAsalto->Ataque();
 }
 
 void AEscuadronNavesFacade::HabilidadEspecialEscuadron()
 {
+	NaveCaza->HabilidadEspecial();
+	NaveFantasma->HabilidadEspecial();
+	NaveAsalto->HabilidadEspecial();
 }
 
