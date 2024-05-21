@@ -27,10 +27,12 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	void Movimiento();
+	void Movimiento(float Deltatime);
 	void Ataque();
 	void HabilidadEspecial();
 
 	float Velocidad;
+	bool MovimientoArriba;
+	bool MovimientoAbajo;
 
 };

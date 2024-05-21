@@ -2,6 +2,8 @@
 
 #include "MyProjectGameMode.h"
 #include "EscuadronNavesFacade.h"
+#include "NaveAtaqueCaza.h"
+#include "NaveAtaqueAsalto.h"
 #include "MyProjectPawn.h"
 
 AMyProjectGameMode::AMyProjectGameMode()
@@ -17,6 +19,8 @@ void AMyProjectGameMode::BeginPlay()
 	Escuadrones->MovimientoEscuadron();
 	Escuadrones->AtaqueEscuadron();
 	Escuadrones->HabilidadEspecialEscuadron();
+
+
 }
 
 void AMyProjectGameMode::Tick(float DeltaTime)

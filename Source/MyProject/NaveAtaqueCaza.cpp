@@ -16,6 +16,8 @@ ANaveAtaqueCaza::ANaveAtaqueCaza()
 	mallaCaza->SetupAttachment(RootComponent);
 	mallaCaza->BodyInstance.SetCollisionProfileName("Escudo");
 	RootComponent = mallaCaza;
+
+	Velocidad = 500;
 }
 
 // Called when the game starts or when spawned
@@ -32,8 +34,12 @@ void ANaveAtaqueCaza::Tick(float DeltaTime)
 
 }
 
-void ANaveAtaqueCaza::Movimiento()
+void ANaveAtaqueCaza::Movimiento(float DeltaTime)
 {
+	//Velocidad = 500;
+	
+
+	
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("La nave caza esta en Movimiento"));
 }
 
