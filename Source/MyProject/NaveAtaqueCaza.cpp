@@ -34,7 +34,7 @@ void ANaveAtaqueCaza::Tick(float DeltaTime)
 
 }
 
-void ANaveAtaqueCaza::Movimiento(float DeltaTime)
+void ANaveAtaqueCaza::Movimiento()
 {
 	//Velocidad = 500;
 	
