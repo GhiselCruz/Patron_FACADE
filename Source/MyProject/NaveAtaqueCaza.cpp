@@ -38,7 +38,6 @@ void ANaveAtaqueCaza::Movimiento(float DeltaTime)
 {
 	//Velocidad = 500;
 	
-
 	
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("La nave caza esta en Movimiento"));
 }
