@@ -17,7 +17,9 @@ ANaveAtaqueCaza::ANaveAtaqueCaza()
 	mallaCaza->BodyInstance.SetCollisionProfileName("Escudo");
 	RootComponent = mallaCaza;
 
-	Velocidad = 500;
+	Velocidad = 10;  //velocidad del movimiento de la nave
+	MovimientoDerecha = true;  //la nave comienza moviendose hacia arriba
+
 }
 
 // Called when the game starts or when spawned
@@ -32,12 +34,30 @@ void ANaveAtaqueCaza::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	//Movimiento horizontal de la nave
+	FVector NuevaPosicion = GetActorLocation();
+	float MovimientoX = Velocidad ;
+	if (MovimientoDerecha)
+	{
+		NuevaPosicion.X += MovimientoX;
+		SetActorLocation(NuevaPosicion);
+	}
+	else
+	{
+		NuevaPosicion.X -= MovimientoX;
+		SetActorLocation(NuevaPosicion);
+	}
+
+	//Cambiar la direccion si la nave alcanza los limites
+	if (NuevaPosicion.X > 1200 || NuevaPosicion.X < 400)
+	{
+		MovimientoDerecha = !MovimientoDerecha;
+	}
 }
 
 void ANaveAtaqueCaza::Movimiento()
 {
 	//Velocidad = 500;
-	
 	
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("La nave caza esta en Movimiento"));
 }

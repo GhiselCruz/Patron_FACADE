@@ -31,4 +31,7 @@ public:
 	void Ataque();
 	void HabilidadEspecial();
 
+	float Velocidad;
+	bool MovimientoA;
+
 };

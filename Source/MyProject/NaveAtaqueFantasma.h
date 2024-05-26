@@ -30,4 +30,7 @@ public:
 	void Movimiento();
 	void Ataque();
 	void HabilidadEspecial();
+
+	float VelocidadDiagonal;
+	bool MovimientoVertical;
 };

@@ -17,7 +17,9 @@ ANaveAtaqueAsalto::ANaveAtaqueAsalto()
 	mallaAsalto->BodyInstance.SetCollisionProfileName("Escudo");
 	RootComponent = mallaAsalto;
 
-
+	Velocidad = 10.0f;
+	MovimientoA = true;
+	
 }
 
 // Called when the game starts or when spawned
@@ -32,10 +34,30 @@ void ANaveAtaqueAsalto::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+
+	/*FVector NuevaPosicion = GetActorLocation();
+	float MovimientoX = Velocidad * DeltaTime;
+	if (MovimientoA)
+	{
+		NuevaPosicion.X += MovimientoX;
+		SetActorLocation(NuevaPosicion);
+	}
+	else
+	{
+		NuevaPosicion.X -= MovimientoX;
+		SetActorLocation(NuevaPosicion);
+	}
+
+	//Cambiar la direccion si la nave alcanza los limites
+	if (NuevaPosicion.X > 1200 || NuevaPosicion.X < 400)
+	{
+		MovimientoA = !MovimientoA;
+	}*/
 }
 
 void ANaveAtaqueAsalto::Movimiento()
 {
+	
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT(" Nave Asalto esta en movimiento"));
 }
 

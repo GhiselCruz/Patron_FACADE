@@ -32,7 +32,7 @@ public:
 	void HabilidadEspecial();
 
 	float Velocidad;
-	bool MovimientoArriba;
-	bool MovimientoAbajo;
+	bool MovimientoDerecha;
+	
 
 };
